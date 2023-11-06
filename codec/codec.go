@@ -8,7 +8,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/std"
 	"github.com/cosmos/cosmos-sdk/types/module"
 	"github.com/cosmos/cosmos-sdk/x/auth/tx"
-	commoncodec "github.com/kaifei-bianjie/common-parser/codec"
+	commoncodec "gitlab.bianjie.ai/chain-parser/common-parser/codec"
 )
 
 // 初始化账户地址前缀

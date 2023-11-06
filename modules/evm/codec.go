@@ -2,7 +2,7 @@ package evm
 
 import (
 	"github.com/evmos/ethermint/x/evm"
-	"github.com/kaifei-bianjie/common-parser/codec"
+	"gitlab.bianjie.ai/chain-parser/common-parser/codec"
 )
 
 func init() {

@@ -1,9 +1,9 @@
 package htlc
 
 import (
-	. "github.com/kaifei-bianjie/common-parser/modules"
-	models "github.com/kaifei-bianjie/common-parser/types"
-	. "github.com/kaifei-bianjie/irismod-parser/modules"
+	. "gitlab.bianjie.ai/chain-parser/common-parser/modules"
+	models "gitlab.bianjie.ai/chain-parser/common-parser/types"
+	. "gitlab.bianjie.ai/chain-parser/irismod-parser/modules"
 )
 
 type DocTxMsgCreateHTLC struct {

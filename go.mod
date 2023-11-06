@@ -7,7 +7,7 @@ require (
 	github.com/evmos/ethermint v0.20.0
 	github.com/irisnet/irismod v1.7.3
 	github.com/stretchr/testify v1.8.1
-	gitlab.bianjie.ai/chain-parser/common-parser v0.0.0-20221202072759-61d0e0bc62a8
+	gitlab.bianjie.ai/chain-parser/common-parser v0.0.0-20231106105236-c9970934d8bb
 )
 
 require (
@@ -150,5 +150,4 @@ replace (
 	github.com/evmos/ethermint => github.com/bianjieai/ethermint v0.20.0-irishub-1
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
 	github.com/tendermint/tendermint => github.com/bianjieai/tendermint v0.34.22-irita-221107
-	gitlab.bianjie.ai/chain-parser/common-parser => gitlab.bianjie.ai/weichang/common-parser v0.0.0-20231106021316-44cfc574dec4
 )

@@ -2,9 +2,9 @@ package evm
 
 import (
 	evm "github.com/evmos/ethermint/x/evm/types"
-	. "github.com/kaifei-bianjie/common-parser/modules"
-	"github.com/kaifei-bianjie/common-parser/utils"
-	. "github.com/kaifei-bianjie/irismod-parser/modules"
+	. "gitlab.bianjie.ai/chain-parser/common-parser/modules"
+	"gitlab.bianjie.ai/chain-parser/common-parser/utils"
+	. "gitlab.bianjie.ai/chain-parser/irismod-parser/modules"
 )
 
 // MsgEthereumTx encapsulates an Ethereum transaction as an SDK message.

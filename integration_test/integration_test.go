@@ -1,8 +1,8 @@
 package integration
 
 import (
-	irismod_parser "github.com/kaifei-bianjie/irismod-parser"
 	"github.com/stretchr/testify/suite"
+	irismod_parser "gitlab.bianjie.ai/chain-parser/irismod-parser"
 	"testing"
 )
 

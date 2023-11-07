@@ -3,8 +3,8 @@ package integration
 import (
 	"encoding/hex"
 	"fmt"
-	. "github.com/kaifei-bianjie/common-parser/codec"
-	"github.com/kaifei-bianjie/common-parser/utils"
+	. "gitlab.bianjie.ai/chain-parser/common-parser/codec"
+	"gitlab.bianjie.ai/chain-parser/common-parser/utils"
 )
 
 func (s IntegrationTestSuite) TestEvm() {

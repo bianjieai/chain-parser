@@ -1,4 +1,4 @@
-module github.com/kaifei-bianjie/irismod-parser
+module gitlab.bianjie.ai/chain-parser/irismod-parser
 
 go 1.18
 
@@ -6,8 +6,8 @@ require (
 	github.com/cosmos/cosmos-sdk v0.46.9
 	github.com/evmos/ethermint v0.20.0
 	github.com/irisnet/irismod v1.7.3
-	github.com/kaifei-bianjie/common-parser v0.0.0-20221202072759-61d0e0bc62a8
 	github.com/stretchr/testify v1.8.1
+	gitlab.bianjie.ai/chain-parser/common-parser v0.0.0-20231106105236-c9970934d8bb
 )
 
 require (
@@ -26,7 +26,6 @@ require (
 	github.com/btcsuite/btcd/btcec/v2 v2.3.2 // indirect
 	github.com/cespare/xxhash v1.1.0 // indirect
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
-	github.com/chzyer/readline v0.0.0-20180603132655-2972be24d48e // indirect
 	github.com/confio/ics23/go v0.9.0 // indirect
 	github.com/cosmos/btcutil v1.0.5 // indirect
 	github.com/cosmos/cosmos-proto v1.0.0-beta.1 // indirect
@@ -34,7 +33,6 @@ require (
 	github.com/cosmos/gogoproto v1.4.3 // indirect
 	github.com/cosmos/gorocksdb v1.2.0 // indirect
 	github.com/cosmos/iavl v0.19.5 // indirect
-	github.com/cosmos/ibc-go/v5 v5.2.0 // indirect
 	github.com/cosmos/ledger-cosmos-go v0.12.2 // indirect
 	github.com/danieljoos/wincred v1.1.2 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
@@ -81,7 +79,6 @@ require (
 	github.com/klauspost/compress v1.15.11 // indirect
 	github.com/libp2p/go-buffer-pool v0.1.0 // indirect
 	github.com/magiconair/properties v1.8.6 // indirect
-	github.com/manifoldco/promptui v0.9.0 // indirect
 	github.com/mattn/go-isatty v0.0.16 // indirect
 	github.com/mattn/go-runewidth v0.0.9 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.2-0.20181231171920-c182affec369 // indirect

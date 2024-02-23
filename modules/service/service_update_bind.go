@@ -14,6 +14,7 @@ type (
 		Pricing     string       `bson:"pricing" yaml:"pricing"`
 		QoS         int64        `bson:"qos" yaml:"qos"`
 		Owner       string       `bson:"owner" yaml:"owner"`
+		Options     string       `bson:"options"`
 	}
 )
 
@@ -30,6 +31,7 @@ func (m *DocMsgUpdateServiceBinding) BuildMsg(v interface{}) {
 	m.Pricing = msg.Pricing
 	m.QoS = int64(msg.QoS)
 	m.Owner = msg.Owner
+	m.Options = msg.Options
 }
 
 func (m *DocMsgUpdateServiceBinding) HandleTxMsg(v SdkMsg) MsgDocInfo {

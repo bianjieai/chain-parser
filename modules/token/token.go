@@ -5,6 +5,7 @@ import (
 	. "gitlab.bianjie.ai/chain-parser/common-parser/modules"
 	. "gitlab.bianjie.ai/chain-parser/irismod-parser/modules"
 	v1 "gitlab.bianjie.ai/chain-parser/irismod-parser/modules/token/v1"
+	"gitlab.bianjie.ai/chain-parser/irismod-parser/modules/token/v1/erc20"
 	"gitlab.bianjie.ai/chain-parser/irismod-parser/modules/token/v1beta1"
 )
 
@@ -62,6 +63,18 @@ func (token TokenClient) HandleTxMsg(v types.Msg) (MsgDocInfo, bool) {
 		break
 	case *MsgSwapFeeTokenV1:
 		docMsg := v1.DocMsgSwapFeeTokenV1{}
+		msgDocInfo = docMsg.HandleTxMsg(msg)
+		break
+	case *MsgDeployERC20:
+		docMsg := erc20.DocMsgDeployERC20{}
+		msgDocInfo = docMsg.HandleTxMsg(msg)
+		break
+	case *MsgSwapFromERC20:
+		docMsg := erc20.DocMsgSwapFromERC20{}
+		msgDocInfo = docMsg.HandleTxMsg(msg)
+		break
+	case *MsgSwapToERC20:
+		docMsg := erc20.DocMsgSwapToERC20{}
 		msgDocInfo = docMsg.HandleTxMsg(msg)
 		break
 	default:

@@ -79,7 +79,11 @@ const (
 	MsgTypeIssueToken         = "issue_token"
 	MsgTypeSwapFeeToken       = "swap_fee_token"
 	MsgTypeTransferTokenOwner = "transfer_token_owner"
-	MsgTypeEthereumTx         = "ethereum_tx"
+	MsgTypeDeployERC20        = "deploy_erc20"
+	MsgTypeSwapFromERC20      = "swap_from_erc20"
+	MsgTypeSwapToERC20        = "swap_to_erc20"
+
+	MsgTypeEthereumTx = "ethereum_tx"
 )
 
 type (
@@ -162,6 +166,9 @@ type (
 	MsgMintTokenV1          = tokenv1.MsgMintToken
 	MsgTransferTokenOwnerV1 = tokenv1.MsgTransferTokenOwner
 	MsgSwapFeeTokenV1       = tokenv1.MsgSwapFeeToken
+	MsgDeployERC20          = tokenv1.MsgDeployERC20
+	MsgSwapFromERC20        = tokenv1.MsgSwapFromERC20
+	MsgSwapToERC20          = tokenv1.MsgSwapToERC20
 
 	//evm
 	MsgEthereumTx = evm.MsgEthereumTx

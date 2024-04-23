@@ -20,7 +20,7 @@ func (m *DocMsgSwapFeeTokenV1) BuildMsg(v interface{}) {
 	msg := v.(*MsgSwapFeeTokenV1)
 
 	m.FeePaid = models.BuildDocCoin(msg.FeePaid)
-	m.Recipient = msg.Recipient
+	m.Recipient = msg.Receiver
 	m.Sender = msg.Sender
 }
 
@@ -28,7 +28,7 @@ func (m *DocMsgSwapFeeTokenV1) HandleTxMsg(v SdkMsg) MsgDocInfo {
 	var addrs []string
 
 	msg := v.(*MsgSwapFeeTokenV1)
-	addrs = append(addrs, msg.Recipient, msg.Sender)
+	addrs = append(addrs, msg.Receiver, msg.Sender)
 	handler := func() (Msg, []string) {
 		return m, addrs
 	}

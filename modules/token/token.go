@@ -65,10 +65,6 @@ func (token TokenClient) HandleTxMsg(v types.Msg) (MsgDocInfo, bool) {
 		docMsg := v1.DocMsgSwapFeeTokenV1{}
 		msgDocInfo = docMsg.HandleTxMsg(msg)
 		break
-	case *MsgDeployERC20:
-		docMsg := erc20.DocMsgDeployERC20{}
-		msgDocInfo = docMsg.HandleTxMsg(msg)
-		break
 	case *MsgSwapFromERC20:
 		docMsg := erc20.DocMsgSwapFromERC20{}
 		msgDocInfo = docMsg.HandleTxMsg(msg)

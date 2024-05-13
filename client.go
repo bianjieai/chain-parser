@@ -6,6 +6,7 @@ import (
 	"gitlab.bianjie.ai/chain-parser/irismod-parser/modules/coinswap"
 	"gitlab.bianjie.ai/chain-parser/irismod-parser/modules/evm"
 	"gitlab.bianjie.ai/chain-parser/irismod-parser/modules/farm"
+	_ "gitlab.bianjie.ai/chain-parser/irismod-parser/modules/feemarket"
 	"gitlab.bianjie.ai/chain-parser/irismod-parser/modules/htlc"
 	"gitlab.bianjie.ai/chain-parser/irismod-parser/modules/mt"
 	"gitlab.bianjie.ai/chain-parser/irismod-parser/modules/nft"

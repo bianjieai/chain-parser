@@ -48,7 +48,6 @@ require (
 	github.com/cockroachdb/errors v1.10.0 // indirect
 	github.com/cockroachdb/logtags v0.0.0-20230118201751-21c54148d20b // indirect
 	github.com/cockroachdb/redact v1.1.5 // indirect
-	github.com/coinbase/rosetta-sdk-go/types v1.0.0 // indirect
 	github.com/confio/ics23/go v0.9.0 // indirect
 	github.com/cosmos/btcutil v1.0.5 // indirect
 	github.com/cosmos/cosmos-proto v1.0.0-beta.4 // indirect
@@ -165,6 +164,6 @@ require (
 )
 
 replace (
-	github.com/evmos/ethermint => github.com/bianjieai/ethermint v0.6.1-0.20230914085944-3cc455cce3d4
+	github.com/evmos/ethermint => github.com/bianjieai/ethermint v0.22.0-irishub-20231207.0.20240419023144-3cea3d782107 //release/v0.2…20231207-lsm
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
 )

@@ -90,8 +90,8 @@ github.com/beorn7/perks v1.0.1/go.mod h1:G2ZrVWU2WbWT9wwq4/hrbKbnv/1ERSJQ0ibhJ6r
 github.com/bgentry/go-netrc v0.0.0-20140422174119-9fd32a8b3d3d h1:xDfNPAt8lFiC1UJrqV3uuy861HCTo708pDMbjHHdCas=
 github.com/bgentry/speakeasy v0.1.1-0.20220910012023-760eaf8b6816 h1:41iFGWnSlI2gVpmOtVTJZNodLdLQLn/KsJqFvXwnd/s=
 github.com/bgentry/speakeasy v0.1.1-0.20220910012023-760eaf8b6816/go.mod h1:+zsyZBPWlz7T6j88CTgSN5bM796AkVf0kBD4zp0CCIs=
-github.com/bianjieai/ethermint v0.6.1-0.20230914085944-3cc455cce3d4 h1:M3LU8I+hB9vqsK4oRFq0GxD+6Pzs48eWejvYuebtweQ=
-github.com/bianjieai/ethermint v0.6.1-0.20230914085944-3cc455cce3d4/go.mod h1:JEhGmVj5rZX5bTfOqh3nltE2N6+qMI4HVNV2vW6PpOQ=
+github.com/bianjieai/ethermint v0.22.0-irishub-20231207.0.20240419023144-3cea3d782107 h1:ssrDDPlhLILV0UaQD+D/mRqAvQ5FeQrWB3lltaP5YTc=
+github.com/bianjieai/ethermint v0.22.0-irishub-20231207.0.20240419023144-3cea3d782107/go.mod h1:x9BFez6AUL9Yksv4zZd3QLmSazwOkyNd3h2zFV2B4RU=
 github.com/btcsuite/btcd v0.23.4 h1:IzV6qqkfwbItOS/sg/aDfPDsjPP8twrCOE2R93hxMlQ=
 github.com/btcsuite/btcd/btcec/v2 v2.3.2 h1:5n0X6hX0Zk+6omWcihdYvdAlGf2DfasC0GMf7DClJ3U=
 github.com/btcsuite/btcd/btcec/v2 v2.3.2/go.mod h1:zYzJ8etWJQIv1Ogk7OzpWjowwOdXY1W/17j2MW85J04=

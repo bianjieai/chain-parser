@@ -1,2 +1,0 @@
-# irismod-parser
-irismod-parser

@@ -1,8 +1,8 @@
 package farm
 
 import (
+	"github.com/bianjieai/chain-parser/common-parser/codec"
 	"github.com/irisnet/irismod/modules/farm"
-	"gitlab.bianjie.ai/chain-parser/common-parser/codec"
 )
 
 func init() {

@@ -1,8 +1,8 @@
 package staking
 
 import (
-	. "gitlab.bianjie.ai/chain-parser/common-parser/modules"
-	. "gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules"
+	. "github.com/bianjieai/chain-parser/common-parser/modules"
+	. "github.com/bianjieai/chain-parser/cosmosmod-parser/modules"
 )
 
 type DocTxMsgTransferTokenizeShareRecord struct {

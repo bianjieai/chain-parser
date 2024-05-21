@@ -1,8 +1,8 @@
 package distribution
 
 import (
-	. "gitlab.bianjie.ai/chain-parser/common-parser/modules"
-	. "gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules"
+	. "github.com/bianjieai/chain-parser/common-parser/modules"
+	. "github.com/bianjieai/chain-parser/cosmosmod-parser/modules"
 )
 
 // msg struct for delegation withdraw from a single validator

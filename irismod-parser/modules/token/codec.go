@@ -1,8 +1,8 @@
 package token
 
 import (
+	"github.com/bianjieai/chain-parser/common-parser/codec"
 	"github.com/irisnet/irismod/modules/token"
-	"gitlab.bianjie.ai/chain-parser/common-parser/codec"
 )
 
 func init() {

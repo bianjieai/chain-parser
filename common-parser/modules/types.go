@@ -1,8 +1,8 @@
 package msgs
 
 import (
+	models "github.com/bianjieai/chain-parser/common-parser/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	models "gitlab.bianjie.ai/chain-parser/common-parser/types"
 )
 
 type (

@@ -1,10 +1,10 @@
 package msgs
 
 import (
+	models "github.com/bianjieai/chain-parser/common-parser/types"
+	"github.com/bianjieai/chain-parser/common-parser/utils"
 	"github.com/cosmos/cosmos-sdk/codec/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	models "gitlab.bianjie.ai/chain-parser/common-parser/types"
-	"gitlab.bianjie.ai/chain-parser/common-parser/utils"
 )
 
 func CreateMsgDocInfo(msg sdk.Msg, handler func() (Msg, []string)) MsgDocInfo {

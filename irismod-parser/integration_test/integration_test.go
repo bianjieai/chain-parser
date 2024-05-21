@@ -2,7 +2,7 @@ package integration
 
 import (
 	"github.com/stretchr/testify/suite"
-	irismod_parser "gitlab.bianjie.ai/chain-parser/irismod-parser"
+	irismod_parser "github.com/bianjieai/chain-parser/irismod-parser"
 	"testing"
 )
 

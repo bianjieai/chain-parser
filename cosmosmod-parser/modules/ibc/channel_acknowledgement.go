@@ -2,10 +2,10 @@ package ibc
 
 import (
 	"fmt"
-	cdc "gitlab.bianjie.ai/chain-parser/common-parser/codec"
-	. "gitlab.bianjie.ai/chain-parser/common-parser/modules"
-	"gitlab.bianjie.ai/chain-parser/common-parser/utils"
-	. "gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules"
+	cdc "github.com/bianjieai/chain-parser/common-parser/codec"
+	. "github.com/bianjieai/chain-parser/common-parser/modules"
+	"github.com/bianjieai/chain-parser/common-parser/utils"
+	. "github.com/bianjieai/chain-parser/cosmosmod-parser/modules"
 )
 
 type DocMsgAcknowledgement struct {

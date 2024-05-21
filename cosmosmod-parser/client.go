@@ -1,22 +1,22 @@
 package cosmosmod_parser
 
 import (
-	. "gitlab.bianjie.ai/chain-parser/common-parser"
-	"gitlab.bianjie.ai/chain-parser/cosmosmod-parser/codec"
-	"gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules/auth"
-	"gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules/authz"
-	"gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules/bank"
-	"gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules/crisis"
-	"gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules/distribution"
-	"gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules/evidence"
-	"gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules/feegrant"
-	"gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules/gov"
-	"gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules/group"
-	"gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules/ibc"
-	"gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules/params"
-	"gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules/slashing"
-	"gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules/staking"
-	"gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules/upgrade"
+	. "github.com/bianjieai/chain-parser/common-parser"
+	"github.com/bianjieai/chain-parser/cosmosmod-parser/codec"
+	"github.com/bianjieai/chain-parser/cosmosmod-parser/modules/auth"
+	"github.com/bianjieai/chain-parser/cosmosmod-parser/modules/authz"
+	"github.com/bianjieai/chain-parser/cosmosmod-parser/modules/bank"
+	"github.com/bianjieai/chain-parser/cosmosmod-parser/modules/crisis"
+	"github.com/bianjieai/chain-parser/cosmosmod-parser/modules/distribution"
+	"github.com/bianjieai/chain-parser/cosmosmod-parser/modules/evidence"
+	"github.com/bianjieai/chain-parser/cosmosmod-parser/modules/feegrant"
+	"github.com/bianjieai/chain-parser/cosmosmod-parser/modules/gov"
+	"github.com/bianjieai/chain-parser/cosmosmod-parser/modules/group"
+	"github.com/bianjieai/chain-parser/cosmosmod-parser/modules/ibc"
+	"github.com/bianjieai/chain-parser/cosmosmod-parser/modules/params"
+	"github.com/bianjieai/chain-parser/cosmosmod-parser/modules/slashing"
+	"github.com/bianjieai/chain-parser/cosmosmod-parser/modules/staking"
+	"github.com/bianjieai/chain-parser/cosmosmod-parser/modules/upgrade"
 )
 
 type MsgClient struct {

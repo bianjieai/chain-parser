@@ -1,8 +1,8 @@
 package v1beta1
 
 import (
-	. "gitlab.bianjie.ai/chain-parser/common-parser/modules"
-	. "gitlab.bianjie.ai/chain-parser/irismod-parser/modules"
+	. "github.com/bianjieai/chain-parser/common-parser/modules"
+	. "github.com/bianjieai/chain-parser/irismod-parser/modules"
 )
 
 type DocMsgTransferTokenOwner struct {

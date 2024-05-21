@@ -1,9 +1,9 @@
 package farm
 
 import (
-	. "gitlab.bianjie.ai/chain-parser/common-parser/modules"
-	models "gitlab.bianjie.ai/chain-parser/common-parser/types"
-	. "gitlab.bianjie.ai/chain-parser/irismod-parser/modules"
+	. "github.com/bianjieai/chain-parser/common-parser/modules"
+	models "github.com/bianjieai/chain-parser/common-parser/types"
+	. "github.com/bianjieai/chain-parser/irismod-parser/modules"
 )
 
 type DocTxMsgUnstake struct {

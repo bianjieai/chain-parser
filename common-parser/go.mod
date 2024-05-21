@@ -1,4 +1,4 @@
-module gitlab.bianjie.ai/chain-parser/common-parser
+module github.com/bianjieai/chain-parser/common-parser
 
 go 1.18
 

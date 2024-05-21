@@ -5,7 +5,7 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	"gitlab.bianjie.ai/chain-parser/common-parser/types"
+	"github.com/bianjieai/chain-parser/common-parser/types"
 	"strings"
 )
 

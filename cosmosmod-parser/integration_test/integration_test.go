@@ -1,8 +1,8 @@
 package integration
 
 import (
+	msg_parser "github.com/bianjieai/chain-parser/cosmosmod-parser"
 	"github.com/stretchr/testify/suite"
-	msg_parser "gitlab.bianjie.ai/chain-parser/cosmosmod-parser"
 	"testing"
 )
 

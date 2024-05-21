@@ -1,13 +1,13 @@
 package codec
 
 import (
+	commoncodec "github.com/bianjieai/chain-parser/common-parser/codec"
 	"github.com/cosmos/cosmos-sdk/codec"
 	ctypes "github.com/cosmos/cosmos-sdk/codec/types"
 	cryptocodec "github.com/cosmos/cosmos-sdk/crypto/codec"
 	"github.com/cosmos/cosmos-sdk/std"
 	"github.com/cosmos/cosmos-sdk/types/module"
 	"github.com/cosmos/cosmos-sdk/x/auth/tx"
-	commoncodec "gitlab.bianjie.ai/chain-parser/common-parser/codec"
 )
 
 // MakeEncodingConfig 初始化账户地址前缀

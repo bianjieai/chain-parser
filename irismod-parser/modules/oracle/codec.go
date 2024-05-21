@@ -1,8 +1,8 @@
 package oracle
 
 import (
+	"github.com/bianjieai/chain-parser/common-parser/codec"
 	"github.com/irisnet/irismod/modules/oracle"
-	"gitlab.bianjie.ai/chain-parser/common-parser/codec"
 )
 
 func init() {

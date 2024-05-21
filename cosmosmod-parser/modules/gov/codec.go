@@ -1,8 +1,8 @@
 package gov
 
 import (
+	"github.com/bianjieai/chain-parser/common-parser/codec"
 	"github.com/cosmos/cosmos-sdk/x/gov"
-	"gitlab.bianjie.ai/chain-parser/common-parser/codec"
 )
 
 func init() {

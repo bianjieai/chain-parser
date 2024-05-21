@@ -2,10 +2,10 @@ package v1
 
 import (
 	"encoding/json"
+	commoncodec "github.com/bianjieai/chain-parser/common-parser/codec"
+	. "github.com/bianjieai/chain-parser/common-parser/modules"
+	. "github.com/bianjieai/chain-parser/cosmosmod-parser/modules"
 	"github.com/sirupsen/logrus"
-	commoncodec "gitlab.bianjie.ai/chain-parser/common-parser/codec"
-	. "gitlab.bianjie.ai/chain-parser/common-parser/modules"
-	. "gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules"
 )
 
 // MsgExecLegacyContent

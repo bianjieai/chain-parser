@@ -2,11 +2,11 @@ package ibc
 
 import (
 	"fmt"
+	cdc "github.com/bianjieai/chain-parser/common-parser/codec"
+	"github.com/bianjieai/chain-parser/common-parser/utils"
+	. "github.com/bianjieai/chain-parser/cosmosmod-parser/modules"
 	icoreclient "github.com/cosmos/ibc-go/v7/modules/core/02-client/types"
 	icorechannel "github.com/cosmos/ibc-go/v7/modules/core/04-channel/types"
-	cdc "gitlab.bianjie.ai/chain-parser/common-parser/codec"
-	"gitlab.bianjie.ai/chain-parser/common-parser/utils"
-	. "gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules"
 )
 
 func loadPacket(packet icorechannel.Packet) Packet {

@@ -1,11 +1,11 @@
 package gov
 
 import (
+	. "github.com/bianjieai/chain-parser/common-parser/modules"
+	. "github.com/bianjieai/chain-parser/cosmosmod-parser/modules"
+	govv1 "github.com/bianjieai/chain-parser/cosmosmod-parser/modules/gov/v1"
+	govv1beta1 "github.com/bianjieai/chain-parser/cosmosmod-parser/modules/gov/v1beta1"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	. "gitlab.bianjie.ai/chain-parser/common-parser/modules"
-	. "gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules"
-	govv1 "gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules/gov/v1"
-	govv1beta1 "gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules/gov/v1beta1"
 )
 
 type GovClient struct {

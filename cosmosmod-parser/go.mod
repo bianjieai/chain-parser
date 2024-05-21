@@ -1,4 +1,4 @@
-module gitlab.bianjie.ai/chain-parser/cosmosmod-parser
+module github.com/bianjieai/chain-parser/cosmosmod-parser
 
 go 1.18
 
@@ -8,7 +8,7 @@ require (
 	github.com/cosmos/ibc-go/v7 v7.3.0
 	github.com/sirupsen/logrus v1.9.0
 	github.com/stretchr/testify v1.8.4
-	gitlab.bianjie.ai/chain-parser/common-parser v0.0.0-20231106074735-5adee909a748
+	github.com/bianjieai/chain-parser/common-parser v0.0.0-20231106074735-5adee909a748
 )
 
 require (

@@ -2,12 +2,12 @@ package v1
 
 import (
 	"encoding/json"
+	commoncodec "github.com/bianjieai/chain-parser/common-parser/codec"
+	. "github.com/bianjieai/chain-parser/common-parser/modules"
+	models "github.com/bianjieai/chain-parser/common-parser/types"
+	"github.com/bianjieai/chain-parser/common-parser/utils"
+	. "github.com/bianjieai/chain-parser/cosmosmod-parser/modules"
 	"github.com/sirupsen/logrus"
-	commoncodec "gitlab.bianjie.ai/chain-parser/common-parser/codec"
-	. "gitlab.bianjie.ai/chain-parser/common-parser/modules"
-	models "gitlab.bianjie.ai/chain-parser/common-parser/types"
-	"gitlab.bianjie.ai/chain-parser/common-parser/utils"
-	. "gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules"
 )
 
 type DocTxMsgSubmitProposalV1 struct {

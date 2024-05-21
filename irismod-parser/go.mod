@@ -1,4 +1,4 @@
-module gitlab.bianjie.ai/chain-parser/irismod-parser
+module github.com/bianjieai/chain-parser/irismod-parser
 
 go 1.18
 
@@ -7,7 +7,7 @@ require (
 	github.com/evmos/ethermint v0.22.0
 	github.com/irisnet/irismod v1.8.1-0.20240422061203-4de9e6f79d84
 	github.com/stretchr/testify v1.8.4
-	gitlab.bianjie.ai/chain-parser/common-parser v0.0.0-20231106074735-5adee909a748
+	github.com/bianjieai/chain-parser/common-parser v0.0.0-20231106074735-5adee909a748
 )
 
 require (

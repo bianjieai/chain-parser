@@ -3,8 +3,8 @@ package integration
 import (
 	"encoding/hex"
 	"fmt"
-	. "gitlab.bianjie.ai/chain-parser/common-parser/codec"
-	"gitlab.bianjie.ai/chain-parser/common-parser/utils"
+	. "github.com/bianjieai/chain-parser/common-parser/codec"
+	"github.com/bianjieai/chain-parser/common-parser/utils"
 )
 
 func (s IntegrationTestSuite) TestOracle() {

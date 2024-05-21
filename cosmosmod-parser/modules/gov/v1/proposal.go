@@ -1,7 +1,7 @@
 package v1
 
 import (
-	models "gitlab.bianjie.ai/chain-parser/common-parser/types"
+	models "github.com/bianjieai/chain-parser/common-parser/types"
 	"time"
 )
 

@@ -1,20 +1,20 @@
 package irismod_parser
 
 import (
-	. "gitlab.bianjie.ai/chain-parser/common-parser"
-	"gitlab.bianjie.ai/chain-parser/irismod-parser/codec"
-	"gitlab.bianjie.ai/chain-parser/irismod-parser/modules/coinswap"
-	"gitlab.bianjie.ai/chain-parser/irismod-parser/modules/evm"
-	"gitlab.bianjie.ai/chain-parser/irismod-parser/modules/farm"
-	_ "gitlab.bianjie.ai/chain-parser/irismod-parser/modules/feemarket"
-	"gitlab.bianjie.ai/chain-parser/irismod-parser/modules/htlc"
-	"gitlab.bianjie.ai/chain-parser/irismod-parser/modules/mt"
-	"gitlab.bianjie.ai/chain-parser/irismod-parser/modules/nft"
-	"gitlab.bianjie.ai/chain-parser/irismod-parser/modules/oracle"
-	"gitlab.bianjie.ai/chain-parser/irismod-parser/modules/random"
-	"gitlab.bianjie.ai/chain-parser/irismod-parser/modules/record"
-	"gitlab.bianjie.ai/chain-parser/irismod-parser/modules/service"
-	"gitlab.bianjie.ai/chain-parser/irismod-parser/modules/token"
+	. "github.com/bianjieai/chain-parser/common-parser"
+	"github.com/bianjieai/chain-parser/irismod-parser/codec"
+	"github.com/bianjieai/chain-parser/irismod-parser/modules/coinswap"
+	"github.com/bianjieai/chain-parser/irismod-parser/modules/evm"
+	"github.com/bianjieai/chain-parser/irismod-parser/modules/farm"
+	_ "github.com/bianjieai/chain-parser/irismod-parser/modules/feemarket"
+	"github.com/bianjieai/chain-parser/irismod-parser/modules/htlc"
+	"github.com/bianjieai/chain-parser/irismod-parser/modules/mt"
+	"github.com/bianjieai/chain-parser/irismod-parser/modules/nft"
+	"github.com/bianjieai/chain-parser/irismod-parser/modules/oracle"
+	"github.com/bianjieai/chain-parser/irismod-parser/modules/random"
+	"github.com/bianjieai/chain-parser/irismod-parser/modules/record"
+	"github.com/bianjieai/chain-parser/irismod-parser/modules/service"
+	"github.com/bianjieai/chain-parser/irismod-parser/modules/token"
 )
 
 type MsgClient struct {

@@ -1,9 +1,9 @@
 package record
 
 import (
+	. "github.com/bianjieai/chain-parser/common-parser/modules"
+	. "github.com/bianjieai/chain-parser/irismod-parser/modules"
 	"github.com/cosmos/cosmos-sdk/types"
-	. "gitlab.bianjie.ai/chain-parser/common-parser/modules"
-	. "gitlab.bianjie.ai/chain-parser/irismod-parser/modules"
 )
 
 type RecordClient struct {

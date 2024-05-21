@@ -2,11 +2,11 @@ package feegrant
 
 import (
 	"encoding/json"
+	"github.com/bianjieai/chain-parser/common-parser/codec"
+	. "github.com/bianjieai/chain-parser/common-parser/modules"
+	. "github.com/bianjieai/chain-parser/cosmosmod-parser/modules"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/sirupsen/logrus"
-	"gitlab.bianjie.ai/chain-parser/common-parser/codec"
-	. "gitlab.bianjie.ai/chain-parser/common-parser/modules"
-	. "gitlab.bianjie.ai/chain-parser/cosmosmod-parser/modules"
 )
 
 type DocTxMsgGrantAllowance struct {

@@ -1,12 +1,12 @@
 package token
 
 import (
+	. "github.com/bianjieai/chain-parser/common-parser/modules"
+	. "github.com/bianjieai/chain-parser/irismod-parser/modules"
+	v1 "github.com/bianjieai/chain-parser/irismod-parser/modules/token/v1"
+	"github.com/bianjieai/chain-parser/irismod-parser/modules/token/v1/erc20"
+	"github.com/bianjieai/chain-parser/irismod-parser/modules/token/v1beta1"
 	"github.com/cosmos/cosmos-sdk/types"
-	. "gitlab.bianjie.ai/chain-parser/common-parser/modules"
-	. "gitlab.bianjie.ai/chain-parser/irismod-parser/modules"
-	v1 "gitlab.bianjie.ai/chain-parser/irismod-parser/modules/token/v1"
-	"gitlab.bianjie.ai/chain-parser/irismod-parser/modules/token/v1/erc20"
-	"gitlab.bianjie.ai/chain-parser/irismod-parser/modules/token/v1beta1"
 )
 
 type TokenClient struct {

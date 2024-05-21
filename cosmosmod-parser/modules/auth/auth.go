@@ -1,8 +1,8 @@
 package auth
 
 import (
+	. "github.com/bianjieai/chain-parser/common-parser/modules"
 	"github.com/cosmos/cosmos-sdk/types"
-	. "gitlab.bianjie.ai/chain-parser/common-parser/modules"
 )
 
 type AuthClient struct {

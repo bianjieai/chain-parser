@@ -3,11 +3,11 @@ module github.com/bianjieai/chain-parser/irismod-parser
 go 1.18
 
 require (
+	github.com/bianjieai/chain-parser/common-parser v0.0.0-20240521110253-31e237ff38d8
 	github.com/cosmos/cosmos-sdk v0.47.9
 	github.com/evmos/ethermint v0.22.0
 	github.com/irisnet/irismod v1.8.1-0.20240422061203-4de9e6f79d84
 	github.com/stretchr/testify v1.8.4
-	github.com/bianjieai/chain-parser/common-parser v0.0.0-20231106074735-5adee909a748
 )
 
 require (
@@ -48,6 +48,7 @@ require (
 	github.com/cockroachdb/errors v1.10.0 // indirect
 	github.com/cockroachdb/logtags v0.0.0-20230118201751-21c54148d20b // indirect
 	github.com/cockroachdb/redact v1.1.5 // indirect
+	github.com/coinbase/rosetta-sdk-go/types v1.0.0 // indirect
 	github.com/confio/ics23/go v0.9.0 // indirect
 	github.com/cosmos/btcutil v1.0.5 // indirect
 	github.com/cosmos/cosmos-proto v1.0.0-beta.4 // indirect

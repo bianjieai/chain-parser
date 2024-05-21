@@ -3,10 +3,10 @@ module github.com/bianjieai/chain-parser/tibc-mod-parser
 go 1.18
 
 require (
+	github.com/bianjieai/chain-parser/common-parser v0.0.0-20240521110253-31e237ff38d8
 	github.com/bianjieai/tibc-go v0.4.4-0.20230824091732-bbd58021f825
 	github.com/cosmos/cosmos-sdk v0.47.4
 	github.com/stretchr/testify v1.8.4
-	github.com/bianjieai/chain-parser/common-parser v0.0.0-20231106074735-5adee909a748
 )
 
 require (
@@ -47,6 +47,7 @@ require (
 	github.com/cespare/xxhash v1.1.0 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/chzyer/readline v1.5.1 // indirect
+	github.com/coinbase/rosetta-sdk-go/types v1.0.0 // indirect
 	github.com/confio/ics23/go v0.9.0 // indirect
 	github.com/cosmos/btcutil v1.0.5 // indirect
 	github.com/cosmos/cosmos-proto v1.0.0-beta.2 // indirect

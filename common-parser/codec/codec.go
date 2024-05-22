@@ -1,33 +1,25 @@
 package codec
 
 import (
-	"github.com/cometbft/cometbft/types"
-	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/codec"
-	ctypes "github.com/cosmos/cosmos-sdk/codec/types"
+	"github.com/cosmos/cosmos-sdk/simapp/params"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 	"github.com/cosmos/cosmos-sdk/x/auth/signing"
+	"github.com/tendermint/tendermint/types"
 )
 
 var (
 	AppModules []module.AppModuleBasic
-	Encodecfg  EncodingConfig
+	Encodecfg  params.EncodingConfig
 )
-
-type EncodingConfig struct {
-	InterfaceRegistry ctypes.InterfaceRegistry
-	Codec             codec.Codec
-	TxConfig          client.TxConfig
-	Amino             *codec.LegacyAmino
-}
 
 func GetTxDecoder() sdk.TxDecoder {
 	return Encodecfg.TxConfig.TxDecoder()
 }
 
 func GetMarshaler() codec.Codec {
-	return Encodecfg.Codec
+	return Encodecfg.Marshaler
 }
 
 func GetSigningTx(txBytes types.Tx) (signing.Tx, error) {

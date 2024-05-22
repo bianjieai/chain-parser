@@ -1,5 +1,5 @@
 package types
 
-import "github.com/bianjieai/chain-parser/common-parser/codec"
+import "github.com/cosmos/cosmos-sdk/simapp/params"
 
-type EncodingConfig codec.EncodingConfig
+type EncodingConfig params.EncodingConfig

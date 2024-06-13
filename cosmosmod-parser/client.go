@@ -31,7 +31,7 @@ type MsgClient struct {
 	Slashing     Client
 	Staking      Client
 	Upgrade      Client
-	Ibc          Client
+	Ibc          ibc.IbcClientI
 	Authz        Client
 	Group        Client
 }

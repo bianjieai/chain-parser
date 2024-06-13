@@ -5,6 +5,8 @@ import (
 	. "github.com/bianjieai/chain-parser/common-parser/modules"
 	"github.com/bianjieai/chain-parser/common-parser/utils"
 	. "github.com/bianjieai/chain-parser/cosmosmod-parser/modules"
+	sdk "github.com/cosmos/cosmos-sdk/types"
+	icatypes "github.com/cosmos/ibc-go/v7/modules/apps/27-interchain-accounts/types"
 )
 
 type DocMsgRecvPacket struct {
@@ -31,13 +33,30 @@ func (m *DocMsgRecvPacket) BuildMsg(v interface{}) {
 }
 
 func (m *DocMsgRecvPacket) HandleTxMsg(v SdkMsg) MsgDocInfo {
-	var addrs []string
+	var (
+		addrs   []string
+		icaMsgs []sdk.Msg
+	)
 
 	msg := v.(*MsgRecvPacket)
-	packetData := UnmarshalPacketData(msg.Packet.GetData())
-	addrs = append(addrs, msg.Signer, packetData.Receiver)
+	switch msg.Packet.DestinationPort {
+	case _dstPortMap[NFTTransferDscPortKey]:
+		packetData := UnmarshalNftPacketData(msg.Packet.GetData())
+		addrs = append(addrs, packetData.Receiver)
+	case icatypes.HostPortID:
+		_, icaMsgs = UnmarshalICAPacketData(msg.Packet.GetData())
+	case _dstPortMap[IBCTransferDscPortKey]:
+		packetData := UnmarshalPacketData(msg.Packet.GetData())
+		addrs = append(addrs, packetData.Receiver)
+	default:
+		packetData := UnmarshalPacketData(msg.Packet.GetData())
+		addrs = append(addrs, packetData.Receiver)
+	}
+	addrs = append(addrs, msg.Signer)
 	handler := func() (Msg, []string) {
 		return m, addrs
 	}
-	return CreateMsgDocInfo(v, handler)
+	msgDocInfo := CreateMsgDocInfo(v, handler)
+	msgDocInfo.Msgs = append(msgDocInfo.Msgs, icaMsgs...)
+	return msgDocInfo
 }

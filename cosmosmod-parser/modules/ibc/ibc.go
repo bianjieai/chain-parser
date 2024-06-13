@@ -1,18 +1,34 @@
 package ibc
 
 import (
+	common "github.com/bianjieai/chain-parser/common-parser"
 	. "github.com/bianjieai/chain-parser/common-parser/modules"
 	. "github.com/bianjieai/chain-parser/cosmosmod-parser/modules"
 	"github.com/cosmos/cosmos-sdk/types"
 )
 
+type IbcClientI interface {
+	common.Client
+	RegisterNFTDstPort(string)
+	RegisterIBCDstPort(value string)
+}
 type IbcClient struct {
 }
 
-func NewClient() IbcClient {
+func NewClient() IbcClientI {
 	return IbcClient{}
 }
 
+func (ibc IbcClient) RegisterNFTDstPort(value string) {
+	if value != "" {
+		_dstPortMap[NFTTransferDscPortKey] = value
+	}
+}
+func (ibc IbcClient) RegisterIBCDstPort(value string) {
+	if value != "" {
+		_dstPortMap[IBCTransferDscPortKey] = value
+	}
+}
 func (ibc IbcClient) HandleTxMsg(v types.Msg) (MsgDocInfo, bool) {
 	var (
 		msgDocInfo MsgDocInfo

@@ -5,6 +5,7 @@ import (
 	commoncodec "github.com/bianjieai/chain-parser/common-parser/codec"
 	. "github.com/bianjieai/chain-parser/common-parser/modules"
 	. "github.com/bianjieai/chain-parser/cosmosmod-parser/modules"
+	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/sirupsen/logrus"
 )
 
@@ -22,7 +23,28 @@ func (m *DocMsgExec) GetType() string {
 func (m *DocMsgExec) BuildMsg(v interface{}) {
 	msg := v.(*MsgExec)
 	m.Grantee = msg.Grantee
+	msgs, _ := UnmarshalExecData(msg)
+	m.Msgs = msgs
+}
+
+func (m *DocMsgExec) HandleTxMsg(v SdkMsg) MsgDocInfo {
+	var addrs []string
+
+	msg := v.(*MsgExec)
+	addrs = append(addrs, msg.Grantee)
+	_, execMsgs := UnmarshalExecData(msg)
+	handler := func() (Msg, []string) {
+		return m, addrs
+	}
+
+	msgDocInfo := CreateMsgDocInfo(v, handler)
+	msgDocInfo.Msgs = append(msgDocInfo.Msgs, execMsgs...)
+	return msgDocInfo
+}
+
+func UnmarshalExecData(msg *MsgExec) ([]interface{}, []sdk.Msg) {
 	msgs := make([]interface{}, 0, len(msg.Msgs))
+	var execMsgs []sdk.Msg
 	for _, message := range msg.Msgs {
 		marshalJSON, err := commoncodec.GetMarshaler().MarshalJSON(message)
 		if err != nil {
@@ -35,19 +57,10 @@ func (m *DocMsgExec) BuildMsg(v interface{}) {
 		}
 
 		msgs = append(msgs, msgInterface)
+		var data sdk.Msg
+		if err := commoncodec.GetMarshaler().UnpackAny(message, &data); err == nil {
+			execMsgs = append(execMsgs, data)
+		}
 	}
-	m.Msgs = msgs
-}
-
-func (m *DocMsgExec) HandleTxMsg(v SdkMsg) MsgDocInfo {
-	var addrs []string
-
-	msg := v.(*MsgExec)
-	addrs = append(addrs, msg.Grantee)
-
-	handler := func() (Msg, []string) {
-		return m, addrs
-	}
-
-	return CreateMsgDocInfo(v, handler)
+	return msgs, execMsgs
 }

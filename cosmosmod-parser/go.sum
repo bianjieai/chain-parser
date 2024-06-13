@@ -255,8 +255,8 @@ github.com/bgentry/go-netrc v0.0.0-20140422174119-9fd32a8b3d3d/go.mod h1:6QX/PXZ
 github.com/bgentry/speakeasy v0.1.0/go.mod h1:+zsyZBPWlz7T6j88CTgSN5bM796AkVf0kBD4zp0CCIs=
 github.com/bgentry/speakeasy v0.1.1-0.20220910012023-760eaf8b6816 h1:41iFGWnSlI2gVpmOtVTJZNodLdLQLn/KsJqFvXwnd/s=
 github.com/bgentry/speakeasy v0.1.1-0.20220910012023-760eaf8b6816/go.mod h1:+zsyZBPWlz7T6j88CTgSN5bM796AkVf0kBD4zp0CCIs=
-github.com/bianjieai/chain-parser/common-parser v0.0.0-20240521110253-31e237ff38d8 h1:87N0vZqTMkLfzQIcpLncZjlyQ2ZpX4sVWHxePeolmOo=
-github.com/bianjieai/chain-parser/common-parser v0.0.0-20240521110253-31e237ff38d8/go.mod h1:5DbG/J+coFwY5FKpCf9zjN58pz1Qrs3PYXDZHrk9We8=
+github.com/bianjieai/chain-parser/common-parser v0.0.0-20240613093521-3da4e078e2b2 h1:CoSoJfYj/ds6JZ2dum5p8IKGNtEnjlZl9Bhtt4FsLX0=
+github.com/bianjieai/chain-parser/common-parser v0.0.0-20240613093521-3da4e078e2b2/go.mod h1:5DbG/J+coFwY5FKpCf9zjN58pz1Qrs3PYXDZHrk9We8=
 github.com/bianjieai/nft-transfer v1.1.2-ibc-v6.1.0.0.20230911023600-fa7bd3f3cb1e h1:6XiMxCG7DpIOBjqw2rGtZgMIOgS/0KsbU6m84BQ0mfo=
 github.com/bianjieai/nft-transfer v1.1.2-ibc-v6.1.0.0.20230911023600-fa7bd3f3cb1e/go.mod h1:u2PNH4v8CD4AWU4Rf7yt8/qqQtrrwwHiw03qQSKERhg=
 github.com/btcsuite/btcd/btcec/v2 v2.3.2 h1:5n0X6hX0Zk+6omWcihdYvdAlGf2DfasC0GMf7DClJ3U=

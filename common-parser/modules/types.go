@@ -10,6 +10,7 @@ type (
 		DocTxMsg models.TxMsg
 		Addrs    []string
 		Signers  []string
+		Msgs     []sdk.Msg
 	}
 	SdkMsg sdk.Msg
 	Msg    models.Msg

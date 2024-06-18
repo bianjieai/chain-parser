@@ -3,7 +3,7 @@ module github.com/bianjieai/chain-parser/cosmosmod-parser
 go 1.18
 
 require (
-	github.com/bianjieai/chain-parser/common-parser v0.0.0-20240521110253-31e237ff38d8
+	github.com/bianjieai/chain-parser/common-parser v0.0.0-20240613093521-3da4e078e2b2
 	github.com/bianjieai/nft-transfer v1.1.2-ibc-v6.1.0.0.20230911023600-fa7bd3f3cb1e
 	github.com/cosmos/cosmos-sdk v0.47.11-ics-lsm
 	github.com/cosmos/ibc-go/v7 v7.3.0
@@ -174,6 +174,7 @@ require (
 	google.golang.org/grpc v1.60.1 // indirect
 	google.golang.org/protobuf v1.32.0 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
+	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	nhooyr.io/websocket v1.8.6 // indirect
 	pgregory.net/rapid v1.1.0 // indirect

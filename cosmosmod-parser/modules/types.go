@@ -13,6 +13,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/group"
 	slashing "github.com/cosmos/cosmos-sdk/x/slashing/types"
 	stake "github.com/cosmos/cosmos-sdk/x/staking/types"
+	icatypes "github.com/cosmos/ibc-go/v7/modules/apps/27-interchain-accounts/types"
 	ibctransfer "github.com/cosmos/ibc-go/v7/modules/apps/transfer/types"
 	ibcclient "github.com/cosmos/ibc-go/v7/modules/core/02-client/types"
 	ibcconnect "github.com/cosmos/ibc-go/v7/modules/core/03-connection/types"
@@ -158,11 +159,12 @@ type (
 	MsgVerifyInvariant = crisis.MsgVerifyInvariant
 
 	NonFungibleTokenIbcPacketData = nfttransfer.NonFungibleTokenPacketData
-	NftMsgTransfer                = nfttransfer.MsgTransfer
+	InterchainAccountPacketData   = icatypes.InterchainAccountPacketData
+	FungibleTokenPacketData       = ibctransfer.FungibleTokenPacketData
 
-	FungibleTokenPacketData = ibctransfer.FungibleTokenPacketData
-	MsgRecvPacket           = ibc.MsgRecvPacket
-	MsgTransfer             = ibctransfer.MsgTransfer
+	NftMsgTransfer = nfttransfer.MsgTransfer
+	MsgRecvPacket  = ibc.MsgRecvPacket
+	MsgTransfer    = ibctransfer.MsgTransfer
 
 	MsgCreateClient       = ibcclient.MsgCreateClient
 	MsgUpdateClient       = ibcclient.MsgUpdateClient

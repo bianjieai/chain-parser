@@ -1,21 +1,40 @@
 package ibc
 
 import (
+	"encoding/base64"
 	"fmt"
 	cdc "github.com/bianjieai/chain-parser/common-parser/codec"
 	"github.com/bianjieai/chain-parser/common-parser/utils"
 	. "github.com/bianjieai/chain-parser/cosmosmod-parser/modules"
+	"github.com/cosmos/cosmos-sdk/types"
+	icatypes "github.com/cosmos/ibc-go/v7/modules/apps/27-interchain-accounts/types"
 	icoreclient "github.com/cosmos/ibc-go/v7/modules/core/02-client/types"
 	icorechannel "github.com/cosmos/ibc-go/v7/modules/core/04-channel/types"
 )
 
+const (
+	NFTTransferDscPortKey = "nft-transfer-dst-port"
+	IBCTransferDscPortKey = "ibc-transfer-dst-port"
+)
+
+var (
+	_dstPortMap = map[string]string{
+		NFTTransferDscPortKey: "nft-transfer",
+		IBCTransferDscPortKey: "transfer",
+	}
+)
+
 func loadPacket(packet icorechannel.Packet) Packet {
 	var data interface{}
-	switch packet.SourcePort {
-	case "nft-transfer":
-		//todo The premise is irishub, not all chains.
+	switch packet.DestinationPort {
+	case _dstPortMap[NFTTransferDscPortKey]:
+		// The premise is irishub, not all chains.
 		// This may not be very accurate, as we will need to implement the requirement of multiple ports in the future, which means that multiple different ports can transfer nf
 		data = UnmarshalNftPacketData(packet.GetData())
+	case icatypes.HostPortID:
+		data, _ = UnmarshalICAPacketData(packet.GetData())
+	case _dstPortMap[IBCTransferDscPortKey]:
+		data = UnmarshalPacketData(packet.GetData())
 	default:
 		data = UnmarshalPacketData(packet.GetData())
 	}
@@ -67,6 +86,52 @@ func UnmarshalPacketData(bytesdata []byte) PacketData {
 	}
 	utils.UnMarshalJsonIgnoreErr(utils.MarshalJsonIgnoreErr(packetData), &data)
 	return data
+}
+
+func UnmarshalICAPacketData(bytesdata []byte) (ICAccountPacketData, []types.Msg) {
+	var (
+		packetData InterchainAccountPacketData
+		data       ICAccountPacketData
+		msgs       []types.Msg
+	)
+	err := cdc.GetMarshaler().UnmarshalJSON(bytesdata, &packetData)
+	if err != nil {
+		fmt.Println("UnmarshalICAPacketData UnmarshalJSON err ", err.Error())
+	}
+	utils.UnMarshalJsonIgnoreErr(utils.MarshalJsonIgnoreErr(packetData), &data)
+	data.Data, msgs = UnmarshalICAData(packetData.GetData())
+	return data, msgs
+}
+
+func UnmarshalICAData(bytesdata []byte) (IcaMsgData, []types.Msg) {
+	data, err := base64.StdEncoding.DecodeString(string(bytesdata))
+	if err != nil {
+		//如果base64解码失败，则说明内容没有base64编码
+		data = bytesdata
+	}
+	var cosmosTx icatypes.CosmosTx
+	if err := cdc.GetMarshaler().Unmarshal(data, &cosmosTx); err != nil {
+		fmt.Println("UnmarshalICAData err ", err.Error())
+	}
+	var (
+		msgs    []types.Msg
+		icaData IcaMsgData
+	)
+	icaData.Messages = make([]interface{}, 0, len(cosmosTx.Messages))
+	for _, message := range cosmosTx.Messages {
+		marshalJSON, err := cdc.GetMarshaler().MarshalJSON(message)
+		if err != nil {
+			fmt.Println("UnmarshalICAData MarshalJSON err:", err)
+		}
+		var msgInterface interface{}
+		utils.UnMarshalJsonIgnoreErr(string(marshalJSON), &msgInterface)
+		icaData.Messages = append(icaData.Messages, msgInterface)
+		var msg types.Msg
+		if err := cdc.GetMarshaler().UnpackAny(message, &msg); err == nil {
+			msgs = append(msgs, msg)
+		}
+	}
+	return icaData, msgs
 }
 
 func loadHeight(height icoreclient.Height) Height {
@@ -123,6 +188,17 @@ type PacketData struct {
 	Amount   string `bson:"amount" json:"amount"`
 	Sender   string `bson:"sender" json:"sender"`
 	Receiver string `bson:"receiver" json:"receiver"`
+}
+
+// InterchainAccountPacketData is comprised of a raw transaction, type of transaction and optional memo field.
+type ICAccountPacketData struct {
+	Type int        `bson:"type" json:"type"`
+	Data IcaMsgData `bson:"data" json:"data"`
+	Memo string     `bson:"memo" json:"memo"`
+}
+
+type IcaMsgData struct {
+	Messages []interface{} `bson:"messages" json:"messages"`
 }
 
 func GetIbcPacketDenom(packet Packet, packetMsgDenom string) string {

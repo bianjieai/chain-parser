@@ -48,6 +48,9 @@ func (m *DocMsgAcknowledgement) HandleTxMsg(v SdkMsg) MsgDocInfo {
 
 func UnmarshalAcknowledgement(bytesdata []byte) string {
 	var result Acknowledgement
-	cdc.GetMarshaler().MustUnmarshalJSON(bytesdata, &result)
+	err := cdc.GetMarshaler().UnmarshalJSON(bytesdata, &result)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
 	return result.String()
 }

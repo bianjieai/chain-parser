@@ -2,7 +2,7 @@ package service
 
 import (
 	"github.com/bianjieai/chain-parser/common-parser/codec"
-	"github.com/irisnet/irismod/modules/service"
+	"mods.irisnet.org/modules/service"
 )
 
 func init() {

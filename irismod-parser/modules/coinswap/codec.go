@@ -1,8 +1,8 @@
 package coinswap
 
 import (
-	"github.com/irisnet/irismod/modules/coinswap"
 	"github.com/bianjieai/chain-parser/common-parser/codec"
+	"mods.irisnet.org/modules/coinswap"
 )
 
 func init() {

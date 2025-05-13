@@ -2,7 +2,7 @@ package random
 
 import (
 	"github.com/bianjieai/chain-parser/common-parser/codec"
-	"github.com/irisnet/irismod/modules/random"
+	"mods.irisnet.org/modules/random"
 )
 
 func init() {

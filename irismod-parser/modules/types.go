@@ -2,17 +2,17 @@ package msgs
 
 import (
 	evm "github.com/evmos/ethermint/x/evm/types"
-	coinswap "github.com/irisnet/irismod/modules/coinswap/types"
-	farm "github.com/irisnet/irismod/modules/farm/types"
-	htlc "github.com/irisnet/irismod/modules/htlc/types"
-	mt "github.com/irisnet/irismod/modules/mt/types"
-	nft "github.com/irisnet/irismod/modules/nft/types"
-	oracle "github.com/irisnet/irismod/modules/oracle/types"
-	random "github.com/irisnet/irismod/modules/random/types"
-	record "github.com/irisnet/irismod/modules/record/types"
-	service "github.com/irisnet/irismod/modules/service/types"
-	tokenv1 "github.com/irisnet/irismod/modules/token/types/v1"
-	tokenv1beta1 "github.com/irisnet/irismod/modules/token/types/v1beta1"
+	coinswap "mods.irisnet.org/modules/coinswap/types"
+	farm "mods.irisnet.org/modules/farm/types"
+	htlc "mods.irisnet.org/modules/htlc/types"
+	mt "mods.irisnet.org/modules/mt/types"
+	nft "mods.irisnet.org/modules/nft/types"
+	oracle "mods.irisnet.org/modules/oracle/types"
+	random "mods.irisnet.org/modules/random/types"
+	record "mods.irisnet.org/modules/record/types"
+	service "mods.irisnet.org/modules/service/types"
+	tokenv1 "mods.irisnet.org/modules/token/types/v1"
+	tokenv1beta1 "mods.irisnet.org/modules/token/types/v1beta1"
 )
 
 const (

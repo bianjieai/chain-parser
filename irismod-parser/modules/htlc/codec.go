@@ -2,7 +2,7 @@ package htlc
 
 import (
 	"github.com/bianjieai/chain-parser/common-parser/codec"
-	"github.com/irisnet/irismod/modules/htlc"
+	"mods.irisnet.org/modules/htlc"
 )
 
 func init() {

@@ -2,7 +2,7 @@ package mt
 
 import (
 	"github.com/bianjieai/chain-parser/common-parser/codec"
-	"github.com/irisnet/irismod/modules/mt"
+	"mods.irisnet.org/modules/mt"
 )
 
 func init() {

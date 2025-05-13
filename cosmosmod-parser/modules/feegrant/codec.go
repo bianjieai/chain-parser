@@ -1,8 +1,8 @@
 package feegrant
 
 import (
+	feegrant "cosmossdk.io/x/feegrant/module"
 	"github.com/bianjieai/chain-parser/common-parser/codec"
-	feegrant "github.com/cosmos/cosmos-sdk/x/feegrant/module"
 )
 
 func init() {

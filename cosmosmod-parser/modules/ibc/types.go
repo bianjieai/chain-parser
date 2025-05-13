@@ -7,9 +7,9 @@ import (
 	"github.com/bianjieai/chain-parser/common-parser/utils"
 	. "github.com/bianjieai/chain-parser/cosmosmod-parser/modules"
 	"github.com/cosmos/cosmos-sdk/types"
-	icatypes "github.com/cosmos/ibc-go/v7/modules/apps/27-interchain-accounts/types"
-	icoreclient "github.com/cosmos/ibc-go/v7/modules/core/02-client/types"
-	icorechannel "github.com/cosmos/ibc-go/v7/modules/core/04-channel/types"
+	icatypes "github.com/cosmos/ibc-go/v8/modules/apps/27-interchain-accounts/types"
+	icoreclient "github.com/cosmos/ibc-go/v8/modules/core/02-client/types"
+	icorechannel "github.com/cosmos/ibc-go/v8/modules/core/04-channel/types"
 )
 
 const (

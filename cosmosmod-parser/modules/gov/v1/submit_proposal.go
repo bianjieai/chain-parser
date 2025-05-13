@@ -16,8 +16,9 @@ type DocTxMsgSubmitProposalV1 struct {
 	Proposer       string        `bson:"proposer"`        //  Address of the proposer
 	Metadata       string        `bson:"metadata"`
 	// Since: cosmos-sdk 0.47
-	Title   string `bson:"title"`
-	Summary string `bson:"summary"`
+	Title     string `bson:"title"`
+	Summary   string `bson:"summary"`
+	Expedited bool   `bson:"expedited"`
 }
 
 func (m *DocTxMsgSubmitProposalV1) GetType() string {
@@ -46,6 +47,7 @@ func (m *DocTxMsgSubmitProposalV1) BuildMsg(txMsg interface{}) {
 	m.Metadata = msg.Metadata
 	m.Title = msg.Title
 	m.Summary = msg.Summary
+	m.Expedited = msg.Expedited
 }
 
 func CovertContent(content GovContent) interface{} {

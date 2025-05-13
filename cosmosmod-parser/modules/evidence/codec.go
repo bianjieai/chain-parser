@@ -1,8 +1,8 @@
 package evidence
 
 import (
+	"cosmossdk.io/x/evidence"
 	"github.com/bianjieai/chain-parser/common-parser/codec"
-	"github.com/cosmos/cosmos-sdk/x/evidence"
 )
 
 func init() {

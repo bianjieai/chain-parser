@@ -1,24 +1,24 @@
 package msgs
 
 import (
+	evidence "cosmossdk.io/x/evidence/types"
+	"cosmossdk.io/x/feegrant"
 	nfttransfer "github.com/bianjieai/nft-transfer/types"
 	"github.com/cosmos/cosmos-sdk/x/authz"
 	bank "github.com/cosmos/cosmos-sdk/x/bank/types"
 	crisis "github.com/cosmos/cosmos-sdk/x/crisis/types"
 	distribution "github.com/cosmos/cosmos-sdk/x/distribution/types"
-	evidence "github.com/cosmos/cosmos-sdk/x/evidence/types"
-	"github.com/cosmos/cosmos-sdk/x/feegrant"
 	govv1 "github.com/cosmos/cosmos-sdk/x/gov/types/v1"
 	govv1beta1 "github.com/cosmos/cosmos-sdk/x/gov/types/v1beta1"
 	"github.com/cosmos/cosmos-sdk/x/group"
 	slashing "github.com/cosmos/cosmos-sdk/x/slashing/types"
 	stake "github.com/cosmos/cosmos-sdk/x/staking/types"
-	icatypes "github.com/cosmos/ibc-go/v7/modules/apps/27-interchain-accounts/types"
-	ibctransfer "github.com/cosmos/ibc-go/v7/modules/apps/transfer/types"
-	ibcclient "github.com/cosmos/ibc-go/v7/modules/core/02-client/types"
-	ibcconnect "github.com/cosmos/ibc-go/v7/modules/core/03-connection/types"
-	ibc "github.com/cosmos/ibc-go/v7/modules/core/04-channel/types"
-	ibcchannel "github.com/cosmos/ibc-go/v7/modules/core/04-channel/types"
+	icatypes "github.com/cosmos/ibc-go/v8/modules/apps/27-interchain-accounts/types"
+	ibctransfer "github.com/cosmos/ibc-go/v8/modules/apps/transfer/types"
+	ibcclient "github.com/cosmos/ibc-go/v8/modules/core/02-client/types"
+	ibcconnect "github.com/cosmos/ibc-go/v8/modules/core/03-connection/types"
+	ibc "github.com/cosmos/ibc-go/v8/modules/core/04-channel/types"
+	ibcchannel "github.com/cosmos/ibc-go/v8/modules/core/04-channel/types"
 )
 
 const (

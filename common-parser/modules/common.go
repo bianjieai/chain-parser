@@ -22,8 +22,8 @@ func CreateMsgDocInfo(msg sdk.Msg, handler func() (Msg, []string)) MsgDocInfo {
 		Msg:  m,
 	}
 
-	_, signers = models.BuildDocSigners(msg.GetSigners())
-	addrs = append(addrs, signers...)
+	//_, signers = models.BuildDocSigners(msg.GetSigners())
+	//addrs = append(addrs, signers...)
 	addrs = append(addrs, addrcollections...)
 
 	return MsgDocInfo{
